@@ -1,0 +1,44 @@
+name: aiml
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python version
+  - python=3.9
+
+  # Core data science packages
+  - pandas>=1.5.0
+  - numpy>=1.24.0
+  - matplotlib>=3.6.0
+  - scikit-learn>=1.2.0
+  - tqdm>=4.64.0
+
+  # Additional useful packages
+  - jupyter>=1.0.0
+  - ipykernel>=6.20.0
+  - seaborn>=0.12.0
+  - pillow>=9.4.0
+
+  # System utilities
+  - git
+  - pip>=22.0.0
+
+  # Pip-only packages
+  - pip:
+    # Deep learning framework
+    - tensorflow[and-cuda]>=2.13.0  # Use tensorflow>=2.13.0 for CPU-only
+    
+    # Computer vision utilities
+    - keras-cv>=0.6.0
+    
+    # API clients
+    - openai>=1.0.0
+    
+    # Additional utilities that may be needed
+    - opencv-python>=4.7.0
+    - imageio>=2.25.0
+    - albumentations>=1.3.0  # For data augmentation
+    
+    # Optional: Visualization and analysis tools
+    - tensorboard>=2.13.0
+    - wandb  # For experiment tracking (optional)
